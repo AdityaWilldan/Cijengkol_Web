@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Cijengkol Serang Panjang Subang - Website Resmi</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+       <link rel="stylesheet" href="style.css">
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0f172b, #172750);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            /* border-radius: 0 0 25px 25px; */
+        }
+
+        #header-nav{
+             background: linear-gradient(135deg, #0f172b, #172750);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: large;
+        }
+
+        nav a:hover {
+            color: #102661;
+        }
+        
+
+        /* Hero Section */
+        .hero {
+    position: relative;
+    height: 70vh;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    max-width: 190vh; /* Atur sesuai kebutuhan */
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+  }
+
+  .hero-bg.active {
+    opacity: 1;
+  }
+
+  .hero-bg.hidden {
+    opacity: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+  }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            /* font-size: 2.5rem; */
+            /* color: #2c3e50; */
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Stats */
+        /* .stats {
+            background: #f8f9fa;
+        } */
+
+        .stats p{
+
+            font-size: large;
+            color: #bdc3c7;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            /* box-shadow: 0 10px 20px rgba(0,0,0,0.1); */
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-item .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #f8f9fa;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .services p{
+            color: #bdc3c7;
+        }
+
+        .services h3{
+            color: #f8f9fa;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+
+        }
+        .service-item {
+            /* background: yellow; */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        /* News */
+        /* .news {
+            background: #f8f9fa;
+        } */
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+
+
+        .news-item iframe{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            /* height: 450px; */
+            border-radius: 15px;
+             width: 350px;      /* Ubah sesuai kebutuhan */
+            height: 250px;     /* Ubah sesuai kebutuhan */
+            max-width: 100%;   
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact */
+        .contact {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info .icon {
+            margin-right: 1rem;
+            color: #f1c40f;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.9);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172b;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid,
+            .services-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        @media (max-width: 768px) {
+    .news-item {
+        width: 100%;
+    }
+    .news-item iframe {
+        width: 250%;
+        height: 350px; /* Atur tinggi sesuai kebutuhan mobile */
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        height: 30vh; /* Atur sesuai kebutuhan, misal 25vh atau 35vh */
+        margin-top: 100px; /* Opsional: sesuaikan jika perlu */
+    }
+    
+}
+@media(max-width: 768px){
+    .button-hero{
+        margin-bottom: 20px;
+    }
+}
+    </style>
+</head>
+<body class="overflow-x-hidden" id="background">
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+
+            <nav id="header-nav" class="shadow-xl bg-gray-900 rounded-b-2xl p-2 fixed w-full z-50 top-0 left-0">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+    <!-- <a href="#" class="flex items-center">
+      <img src="/img/KKN 05 CIJENGKOL.png" class="h-10 mr-3" alt="Logo Desa" />
+      <span class="self-center text-2xl font-sans whitespace-nowrap text-blue-500">Desa<span class="text-sky-400">Cijengkol</span></span>
+    </a> -->
+                <div class="logo">
+                <img src="/img/KKN 05 CIJENGKOL.png"alt="Logo Desa" class="h-10 mr-3">
+                <div>
+                    <h1>Desa Cijengkol</h1>
+                    <small>Kecamatan Serang Panjang, Kabupaten Subang</small>
+                </div>
+            </div>
+    <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-800 md:flex-row md:space-x-3 md:mt-0 md:border-0 md:bg-transparent">
+        <li>
+          <a href="/index.html" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0">Beranda</a>
+        </li>
+        <li>
+          <a href="/umkm.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">UMKM</a>
+        </li>
+        <li>
+          <a href="/wisata.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Wisata&Kuliner</a>
+        </li>
+        <!-- <li>
+          <a href="/gallery.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Gallery</a>
+        </li> -->
+        <!-- Tambahkan menu lain sesuai kebutuhan -->
+      </ul>
+    </div>
+  </div>
+</nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero" id="home">
+  <!-- Background Slides -->
+  <div class="hero-bg active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/img/KKN 05 CIJENGKOL.png');"></div>
+  <div class="hero-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/img/Screenshot from 2025-08-26 07-47-51.png');"></div>
+  <div class="hero-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/img/hero3.jpg');"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content relative z-10">
+    <h1 class="text-3xl sm:text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+      Tempat Wisata Di Desa
+      <span class="text-blue-400">Desa</span><span class="text-sky-500"> Cijengkol</span>
+    </h1>
+    <br>
+    <p class="text-xs sm:text-2xl md:text-7xl">Temukan Liburan Wisata Anda di Desa Cijengkol!</p>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button id="prev" class="absolute top-1/2 left-3 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-black z-20">❮</button>
+  <button id="next" class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-black z-20">❯</button>
+</section>
+
+
+    <!-- Stats Section -->
+    <section class="stats" id="profil">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="mt-20 text-2xl pt-30 leading-tight sm:text-5xl text-slate-500 bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent">Gallery Photo
+            </div>
+            <div class="stats-grid">
+ 
+                </div>
+<div class="flex flex-wrap justify-center gap-1 mb-2 mt-20">
+
+
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4">
+        <div data-aos="fade-down">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+        </div>
+        <div data-aos="fade-right">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+        </div>
+        <div data-aos="fade-up">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div data-aos="fade-up">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+        </div>
+        <div data-aos="zoom-in-up"> 
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+        </div>
+        <div data-aos="fade-up">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div data-aos="fade-down">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+        </div>
+        <div data-aos="fade-up-left">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+        </div>
+        <div data-aos="fade-up">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div data-aos="fade-up">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+        </div>
+        <div data-aos="fade-left">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+        </div>
+        <div data-aos="fade-up-left">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<div class="grid gap-4 pt-5" data-aos="fade-up">
+    <div>
+        <img id="main-img" class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
+    </div>
+    <div class="grid grid-cols-5 gap-4">
+        <div>
+            <img class="thumb h-auto max-w-full rounded-lg cursor-pointer" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+        </div>
+        <div>
+            <img class="thumb h-auto max-w-full rounded-lg cursor-pointer" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+        </div>
+        <div>
+            <img class="thumb h-auto max-w-full rounded-lg cursor-pointer" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+        </div>
+        <div>
+            <img class="thumb h-auto max-w-full rounded-lg cursor-pointer" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+        </div>
+        <div>
+            <img class="thumb h-auto max-w-full rounded-lg cursor-pointer" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+            </div>
+    </section>
+
+
+<!-- 
+<div
+  class="relative w-[500px] h-[400px] rounded-lg overflow-hidden shadow-sm border border-slate-200 my-6 flex items-end transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+  style="background-image: url('https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;"
+  id="wisata-card"
+>
+  <div class="w-full bg-black/60 text-white p-4 hidden" id="card-desc">
+    The place is close to Barceloneta Beach and bus stop just 2 min by walk
+    and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+  </div>
+  <div class="absolute inset-0 flex items-end justify-center pb-4 pointer-events-none">
+  </div>
+</div> -->
+
+
+
+    <!-- Services Section -->
+    <!-- <section class="services" id="layanan">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="text-slate-200 text-2xl pt-30 leading-tight sm:text-5xl text-slate-500 bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent">Layanan Desa</h2>
+                <p class="text-slate-200 text-sm">Berbagai layanan administratif dan publik yang tersedia</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-gray-650">
+                    <div class="icon">📋</div>
+                    <h3 >Surat Keterangan</h3>
+                    <p class="pt-5">Penerbitan surat keterangan domisili, kelahiran, kematian, dan surat-surat penting lainnya.</p>
+                </div>
+                <div class="service-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-gray-650">
+                    <div class="icon">🆔</div>
+                    <h3>Administrasi KTP</h3>
+                    <p>Pelayanan pembuatan dan perpanjangan KTP, KK, dan dokumen identitas lainnya.</p>
+                </div>
+                <div class="service-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-gray-650">
+                    <div class="icon">💰</div>
+                    <h3>Bantuan Sosial</h3>
+                    <p>Program bantuan untuk masyarakat kurang mampu, PKH, BLT, dan program sosial lainnya.</p>
+                </div>
+                <div class="service-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-gray-650">
+                    <div class="icon">🏥</div>
+                    <h3>Kesehatan</h3>
+                    <p>Pelayanan kesehatan melalui Puskesmas, Posyandu, dan program kesehatan masyarakat.</p>
+                </div>
+                <div class="service-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-gray-650">
+                    <div class="icon">🎓</div>
+                    <h3>Pendidikan</h3>
+                    <p>Fasilitas pendidikan dari PAUD hingga SMA, plus program beasiswa untuk siswa berprestasi.</p>
+                </div>
+                <div class="service-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900x`">
+                    <div class="icon">🏗️</div>
+                    <h3>Infrastruktur</h3>
+                    <p>Pembangunan dan pemeliharaan jalan, jembatan, irigasi, dan infrastruktur publik lainnya.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- News Section -->
+    <!-- <section class="news" id="berita">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="text-slate-200 text-2xl pt-30 leading-tight sm:text-5xl text-slate-500 bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent">Peta Lokasi Desa</h2>
+                <p></p>
+            </div>
+            <div class="news-grid">
+                <div class="news-item fade-in">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15851.520090888369!2d107.61664265961026!3d-6.661787893328855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6918de731075f3%3A0xe368055b38bf3dbf!2sCijengkol%2C%20Serangpanjang%2C%20Subang%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1756263125466!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section> -->
+
+    <!-- Gallery Section -->
+    <!-- <section class="gallery" id="galeri">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeri Desa</h2>
+                <p>Dokumentasi kegiatan dan keindahan Desa Maju Bersama</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%2332CD32' width='300' height='300'/><rect fill='%238B4513' x='100' y='200' width='100' height='80'/><polygon fill='%23FF4500' points='100,200 150,150 200,200'/><circle fill='%23FFD700' cx='80' cy='80' r='25'/><rect fill='%2300FF00' x='0' y='280' width='300' height='20'/></svg>" alt="Pemandangan Desa">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%2387CEEB' width='300' height='300'/><rect fill='%23FFF' x='50' y='150' width='200' height='100'/><rect fill='%23FF0000' x='60' y='140' width='180' height='20'/><text x='150' y='200' text-anchor='middle' font-size='20' font-weight='bold'>KANTOR DESA</text></svg>" alt="Kantor Desa">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23228B22' width='300' height='300'/><rect fill='%23ADFF2F' x='20' y='100' width='60' height='60'/><rect fill='%23ADFF2F' x='100' y='100' width='60' height='60'/><rect fill='%23ADFF2F' x='180' y='100' width='60' height='60'/><rect fill='%23ADFF2F' x='60' y='180' width='60' height='60'/><rect fill='%23ADFF2F' x='140' y='180' width='60' height='60'/><text x='150' y='50' text-anchor='middle' fill='white' font-size='18' font-weight='bold'>SAWAH</text></svg>" alt="Area Persawahan">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23FF69B4' width='300' height='300'/><circle fill='%23FFD700' cx='150' cy='100' r='30'/><rect fill='%238B4513' x='140' y='130' width='20' height='50'/><circle fill='%23228B22' cx='150' cy='200' r='40'/><text x='150' y='250' text-anchor='middle' fill='white' font-size='14' font-weight='bold'>MASJID</text></svg>" alt="Masjid Desa">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%234682B4' width='300' height='300'/><rect fill='%23FFF' x='80' y='120' width='140' height='80'/><rect fill='%23FF0000' x='90' y='110' width='120' height='15'/><text x='150' y='160' text-anchor='middle' font-size='16' font-weight='bold'>SD NEGERI</text><rect fill='%23FF0000' x='145' y='90' width='10' height='30'/><rect fill='%23FF0000' x='155' y='95' width='15' height='10'/></svg>" alt="Sekolah Dasar">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect fill='%23DDA0DD' width='300' height='300'/><rect fill='%23FFB6C1' x='60' y='120' width='50' height='60'/><rect fill='%23FFB6C1' x='130' y='120' width='50' height='60'/><rect fill='%23FFB6C1' x='200' y='120' width='50' height='60'/><text x='150' y='80' text-anchor='middle' fill='white' font-size='18' font-weight='bold'>POSYANDU</text></svg>" alt="Posyandu">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontak">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Hubungi Kami</h2>
+                <p style="color: #bdc3c7;">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="icon">📍</span>
+                        <strong>Alamat:</strong><br>
+                        8JPH+2J4, Jln, Serang Panjang, Subang, Cijengkol, Kec. Serang Panjang, Kabupaten Subang, Jawa Barat (41282)<br>
+                        Desa Cijengkol, Kec. Serang Panjang<br>
+                        Kab. Subang (41282)
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="icon">📞</span>
+                        <strong>Telepon:</strong> (021) 1234-5678
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="icon">📧</span>
+                        <strong>Email:</strong> info@desamajubersama.com
+                    </div>
+                    <div>
+                        <span class="icon">🕒</span>
+                        <strong>Jam Pelayanan:</strong><br>
+                        Senin - Jumat: 08.00 - 16.00 WIB<br>
+                        Sabtu: 08.00 - 12.00 WIB<br>
+                        Minggu: Libur
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap:</label>
+                            <input type="text" id="nama" name="nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subjek">Subjek:</label>
+                            <input type="text" id="subjek" name="subjek" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan">Pesan:</label>
+                            <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#414040" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+</div> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Desa Maju Bersama. Semua hak dilindungi undang-undang.</p>
+            <p>Website ini dikelola oleh Pemerintah Desa Maju Bersama</p>
+        </div>
+    </footer>
+
+</body>
+
+    <!-- <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera merespons.');
+            this.reset();
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Counter animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 20);
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target.querySelector('h3');
+                    const value = parseInt(target.textContent.replace(/,/g, ''));
+                    animateCounter() -->
+    <script>
+// filepath: /home/wolfgang/Downloads/kkn/index.html
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector('[data-collapse-toggle="navbar-solid-bg"]');
+  const mobileMenu = document.getElementById('navbar-solid-bg');
+  if (toggleButton && mobileMenu) {
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('block');
+    });
+  }
+});
+
+// filepath: /home/wolfgang/Downloads/kkn/wisata.html
+document.addEventListener('DOMContentLoaded', function () {
+  const card = document.getElementById('wisata-card');
+  const desc = document.getElementById('card-desc');
+  card.addEventListener('click', function () {
+    desc.classList.toggle('hidden');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Ambil semua card dan deskripsi
+  const cards = document.querySelectorAll('.wisata-card');
+  const descs = document.querySelectorAll('.card-desc');
+
+  cards.forEach((card, i) => {
+    card.addEventListener('click', function () {
+      descs[i].classList.toggle('hidden');
+    });
+  });
+});
+
+//   const slides = document.querySelectorAll(".hero-bg");
+//   let current = 0;
+
+//   setInterval(() => {
+//     slides[current].classList.add("hidden");
+//     current = (current + 1) % slides.length;
+//     slides[current].classList.remove("hidden");
+//   }, 4000); // Ganti gambar tiap 4 detik
+
+  const slides = document.querySelectorAll('.hero-bg');
+  const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.classList.remove('active');
+      if (idx === i) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  // Optional: auto-slide tiap 5 detik
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 5000);
+
+
+document.querySelectorAll('.thumb').forEach(img => {
+    img.addEventListener('click', function() {
+        document.getElementById('main-img').src = this.src;
+    });
+});
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>

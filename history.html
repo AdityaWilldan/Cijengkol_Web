@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Cijengkol Serang Panjang Subang - Website Resmi</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+       <link rel="stylesheet" href="style.css">
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0f172b, #172750);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            /* border-radius: 0 0 25px 25px; */
+        }
+
+        #header-nav{
+             background: linear-gradient(135deg, #0f172b, #172750);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: large;
+        }
+
+        nav a:hover {
+            color: #102661;
+        }
+        
+
+        /* Hero Section */
+        .hero {
+            /* background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/img/Screenshot\ from\ 2025-08-26\ 07-47-51.png'); */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+            border-radius: 25px;
+            overflow: hidden;
+            max-width: 95%;    /* Tambahkan ini */
+            margin-left: auto;   /* Tambahkan ini */
+            margin-right: auto;
+            margin-top: 5%;
+        }
+
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            /* font-size: 2.5rem; */
+            /* color: #2c3e50; */
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Stats */
+        /* .stats {
+            background: #f8f9fa;
+        } */
+
+        .stats p{
+
+            font-size: large;
+            color: #bdc3c7;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-item .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #f8f9fa;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .services p{
+            color: #bdc3c7;
+        }
+
+        .services h3{
+            color: #f8f9fa;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+
+        }
+        .service-item {
+            /* background: yellow; */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        /* News */
+        /* .news {
+            background: #f8f9fa;
+        } */
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .news-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            width: 950px;      /* Sesuaikan dengan lebar iframe */
+            max-width: 100%;   /* Responsif di mobile */
+            margin: 0 auto;    /* Tengah */
+            padding: 0;   
+        }
+
+        .news-item iframe{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            /* height: 450px; */
+            border-radius: 15px;
+             width: 950px;      /* Ubah sesuai kebutuhan */
+            height: 450px;     /* Ubah sesuai kebutuhan */
+            max-width: 100%;   
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact */
+        .contact {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info .icon {
+            margin-right: 1rem;
+            color: #f1c40f;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.9);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172b;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid,
+            .services-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        @media (max-width: 768px) {
+    .news-item {
+        width: 100%;
+    }
+    .news-item iframe {
+        width: 250%;
+        height: 350px; /* Atur tinggi sesuai kebutuhan mobile */
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        height: 30vh; /* Atur sesuai kebutuhan, misal 25vh atau 35vh */
+        margin-top: 100px; /* Opsional: sesuaikan jika perlu */
+    }
+    
+}
+@media(max-width: 768px){
+    .button-hero{
+        margin-bottom: 20px;
+    }
+}
+    </style>
+</head>
+<body class="overflow-x-hidden" id="background">
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+
+            <nav id="header-nav" class="shadow-xl bg-gray-900 rounded-b-2xl p-2 fixed w-full z-50 top-0 left-0">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+    <!-- <a href="#" class="flex items-center">
+      <img src="/img/KKN 05 CIJENGKOL.png" class="h-10 mr-3" alt="Logo Desa" />
+      <span class="self-center text-2xl font-sans whitespace-nowrap text-blue-500">Desa<span class="text-sky-400">Cijengkol</span></span>
+    </a> -->
+                <div class="logo">
+                <img src="/img/KKN 05 CIJENGKOL.png"alt="Logo Desa" class="h-10 mr-3">
+                <div>
+                    <h1>Desa Cijengkol</h1>
+                    <small>Kecamatan Serang Panjang, Kabupaten Subang</small>
+                </div>
+            </div>
+    <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-800 md:flex-row md:space-x-3 md:mt-0 md:border-0 md:bg-transparent">
+        <li>
+          <a href="#home" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0">Beranda</a>
+        </li>
+        <li>
+          <a href="/umkm.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">UMKM</a>
+        </li>
+        <li>
+          <a href="/wisata.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Wisata&Kuliner</a>
+        </li>
+        <!-- <li>
+          <a href="/gallery.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Gallery</a>
+        </li> -->
+        <!-- Tambahkan menu lain sesuai kebutuhan -->
+      </ul>
+    </div>
+  </div>
+</nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+    <h1 data-aos="fade-up" class="text-3xl sm:text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+    Selamat Datang di
+    <span class="text-blue-400">Desa</span><span class="text-sky-500"> Cijengkol</span>
+    </h1>
+            <!-- <h2>Selamat Datang di Desa Cijengkol</h2> -->
+              </div>
+        </div>
+    </section>
+
+
+
+<!-- Sejarah Section -->
+<section id="sejarah" class="bg-gray-50 dark:bg-gray-900 py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Judul -->
+    <div class="text-center mb-10" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white">
+        Sejarah Desa Cijengkol
+      </h2>
+      <p class="mt-3 text-lg text-gray-600 dark:text-gray-300">
+        Mengenal asal-usul dan perjalanan Desa Cijengkol dari masa ke masa
+      </p>
+    </div>
+
+    <!-- Artikel -->
+    <article class="prose lg:prose-lg dark:prose-invert prose-slate mx-auto leading-relaxed text-justify" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        Desa Cijengkol merupakan salah satu desa yang terletak di Kecamatan Serang Panjang, Kabupaten Subang.
+        Sejak dahulu, desa ini dikenal dengan keasrian alamnya serta masyarakat yang menjunjung tinggi semangat gotong royong.
+      </p>
+
+      <p>
+        <!-- Gambar nyelip kiri -->
+        <img src="/img/sejarah-desa.jpg" alt="Sejarah Desa" 
+             class="w-48 h-48 object-cover rounded-lg float-left mr-4 mb-2">
+        Berdasarkan cerita para sesepuh, nama <strong>Cijengkol</strong> berasal dari pohon jengkol yang tumbuh subur 
+        di sekitar aliran sungai pada masa lampau. Dari situlah kemudian kawasan ini dikenal sebagai tempat tinggal 
+        yang nyaman dan berkembang menjadi sebuah perkampungan.
+      </p>
+
+      <p>
+        Seiring berjalannya waktu, Desa Cijengkol tumbuh menjadi desa yang dinamis. Masyarakatnya banyak yang
+        berprofesi sebagai petani, peternak, serta pelaku UMKM. Tradisi adat dan kebudayaan masih terjaga,
+        menjadikan desa ini kaya akan nilai sejarah dan budaya.
+      </p>
+
+      <p>
+        <!-- Gambar nyelip kanan -->
+        <img src="/img/tradisi.jpg" alt="Tradisi Desa" 
+             class="w-48 h-48 object-cover rounded-lg float-right ml-4 mb-2">
+        Hingga saat ini, Desa Cijengkol terus bertransformasi menjadi desa yang maju, sejahtera, dan berkelanjutan,
+        dengan tetap menjaga warisan budaya dan kearifan lokal yang diwariskan oleh leluhur.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- Sejarah Section -->
+<section id="sejarah" class="bg-gray-50 dark:bg-gray-900 py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Judul -->
+    <div class="text-center mb-10" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white">
+        Sejarah Desa Cijengkol
+      </h2>
+      <p class="mt-3 text-lg text-gray-600 dark:text-gray-300">
+        Mengenal asal-usul dan perjalanan Desa Cijengkol dari masa ke masa
+      </p>
+    </div>
+
+    <!-- Artikel -->
+    <article class="prose lg:prose-lg dark:prose-invert prose-slate mx-auto leading-relaxed text-justify" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        Desa Cijengkol merupakan salah satu desa yang terletak di Kecamatan Serang Panjang, Kabupaten Subang.
+        Sejak dahulu, desa ini dikenal dengan keasrian alamnya serta masyarakat yang menjunjung tinggi semangat gotong royong.
+      </p>
+
+      <!-- Gambar nyelip ala koran -->
+      <p>
+        <img src="/img/sejarah-desa.jpg" alt="Ilustrasi Sejarah Desa"
+             class="float-left w-60 h-auto mr-4 mb-2 rounded-lg shadow-md" />
+        Berdasarkan cerita para sesepuh, nama <strong>Cijengkol</strong> berasal dari pohon jengkol yang tumbuh subur di sekitar
+        aliran sungai pada masa lampau. Dari situlah kemudian kawasan ini dikenal sebagai tempat tinggal yang nyaman
+        dan berkembang menjadi sebuah perkampungan. Keberadaan pohon ini menjadi simbol sekaligus penanda bagi masyarakat setempat.
+      </p>
+
+      <p>
+        Seiring berjalannya waktu, Desa Cijengkol tumbuh menjadi desa yang dinamis. Masyarakatnya banyak yang
+        berprofesi sebagai petani, peternak, serta pelaku UMKM. Tradisi adat dan kebudayaan masih terjaga,
+        menjadikan desa ini kaya akan nilai sejarah dan budaya.
+      </p>
+
+      <!-- Gambar nyelip kanan -->
+      <p>
+        <img src="/img/tradisi.jpg" alt="Tradisi Desa"
+             class="float-right w-60 h-auto ml-4 mb-2 rounded-lg shadow-md" />
+        Hingga saat ini, Desa Cijengkol terus bertransformasi menjadi desa yang maju, sejahtera, dan berkelanjutan,
+        dengan tetap menjaga warisan budaya dan kearifan lokal yang diwariskan oleh leluhur. 
+        Kehidupan sosial masyarakat masih erat dengan gotong royong, sehingga nilai kebersamaan tetap terjaga meski zaman semakin modern.
+      </p>
+    </article>
+  </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontak">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Hubungi Kami</h2>
+                <p style="color: #bdc3c7;">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="icon">📍</span>
+                        <strong>Alamat:</strong><br>
+                        8JPH+2J4, Jln, Serang Panjang, Subang, Cijengkol, Kec. Serang Panjang, Kabupaten Subang, Jawa Barat (41282)<br>
+                        Desa Cijengkol, Kec. Serang Panjang<br>
+                        Kab. Subang (41282)
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="icon">📞</span>
+                        <strong>Telepon:</strong> (021) 1234-5678
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="icon">📧</span>
+                        <strong>Email:</strong> info@desamajubersama.com
+                    </div>
+                    <div>
+                        <span class="icon">🕒</span>
+                        <strong>Jam Pelayanan:</strong><br>
+                        Senin - Jumat: 08.00 - 16.00 WIB<br>
+                        Sabtu: 08.00 - 12.00 WIB<br>
+                        Minggu: Libur
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap:</label>
+                            <input type="text" id="nama" name="nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subjek">Subjek:</label>
+                            <input type="text" id="subjek" name="subjek" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan">Pesan:</label>
+                            <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Desa Maju Bersama. Semua hak dilindungi undang-undang.</p>
+            <p>Website ini dikelola oleh Pemerintah Desa Maju Bersama</p>
+        </div>
+    </footer>
+
+</body>
+
+   
+    <script>
+// filepath: /home/wolfgang/Downloads/kkn/index.html
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector('[data-collapse-toggle="navbar-solid-bg"]');
+  const mobileMenu = document.getElementById('navbar-solid-bg');
+  if (toggleButton && mobileMenu) {
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('block');
+    });
+  }
+});
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
