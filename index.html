@@ -551,7 +551,7 @@
             <!-- <a href="#layanan" class="btn">Jelajahi Layanan</a>
                         <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start"> -->
                 <button class="button-hero">
-                <a rel="noopener noreferrer" href="/history.html" style="box-shadow: 3px 3px 10px #2563eb, -3px -3px 20px #1d4ed8;" class="h-[60px] flex items-center hover:opacity-80 transition duration-300 ease-in-out px-8 py-3 text-lg mx-30 font-semibold rounded hover:text-gray-300 bg-blue-500 hover:bg-blue-800 dark:text-gray-900" data-aos="fade-right">Sejarah</a>
+                <a rel="noopener noreferrer" href="/history.html" style="box-shadow: 3px 3px 10px #2563eb, -3px -3px 20px #1d4ed8;" class="h-[60px] flex items-center hover:opacity-80 transition duration-300 ease-in-out px-8 py-3 text-lg mx-30 font-semibold rounded hover:text-gray-300 bg-blue-500 hover:bg-blue-800 dark:text-gray-900" data-aos="fade-right">Tentang Desa</a>
               </button>
                 <a rel="noopener noreferrer" href="/gallery.html" class="px-8 py-4 m-3 text-lg font-semibold border rounded dark:border-gray-100 hover:bg-blue-800 text-slate-100" data-aos="fade-left">Gallery</a>
               </div>
@@ -566,69 +566,96 @@
                 <p class="text-slate-200 text-sm" data-aos="zoom-in-up">Data dan statistik Desa Maju Bersama</p>
             </div>
             <div class="stats-grid">
-                <div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900" data-aos="fade-up">
-                    <div class="icon">👨‍👩‍👧‍👦</div>
-                    <h3>2,453</h3>
-                    <p class="text-slate-200 text-xl">Total Penduduk</p>
-                </div>
-                <div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900" data-aos="fade-right">
-                    <div class="icon">🏠</div>
-                    <h3>687</h3>
-                    <p class="text-slate-200 text-xl">Kepala Keluarga</p>
-                </div>
-                <div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900" data-aos="fade-up">
-                    <div class="icon">🌾</div>
-                    <h3>850</h3>
-                    <p class="text-slate-200 text-xl">Hektar Lahan</p>
-                </div>
-                <!-- <div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900" data-aos="fade-left">
-                    <div class="icon">📍</div>
-                    <h3>4</h3>
-                    <p class="text-slate-200 text-xl">Dusun</p>
-                </div> -->
 
-                <!-- Card pemicu popup -->
-<div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900 cursor-pointer" id="dusunCard" data-aos="fade-left">
+<!-- Card pemicu popup -->
+<div class="stat-item bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900 cursor-pointer" id="lahanCard"data-aos="fade-up">
+  <div class="icon">🌾</div>
+  <h3>850</h3>
+  <p class="text-slate-200 text-xl">Hektar Lahan</p>
+</div>
+
+<div class="stat-item bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900 cursor-pointer" id="dusunCard"data-aos="fade-up">
   <div class="icon">📍</div>
   <h3>4</h3>
   <p class="text-slate-200 text-xl">Dusun</p>
 </div>
 
-<!-- Popup Deskripsi -->
-<div class="card-desc hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 overflow-y-auto max-h-screen" id="dusunPopup">
-  <div class="bg-gray-800 rounded-lg shadow-lg max-w-3xl w-full p-6 relative backdrop-opacity-10 mx-4 my-8 max-h-[90vh] overflow-y-auto">
-    <button id="closePopup" class="absolute top-2 right-2 text-gray-700 hover:text-red-600 text-2xl pt-10 pr-10 h-50 w-50">&times;</button>
-    <h2 class="text-2xl font-bold mb-4 text-white pt-20 text-center">Peta Perdusun Di desa Cijengkol</h2>
-    <p class="mb-6 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, cumque est repellat, similique eaque iusto non repellendus maiores id temporibus illum nihil excepturi quisquam? Amet quam laboriosam adipisci aliquid porro.</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-  <div class="flex flex-col items-center">
-    <img src="https://picsum.photos/300/200?random=1" class="rounded-lg shadow-md" alt="Dusun 1">
-    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 1</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <img src="https://picsum.photos/300/200?random=2" class="rounded-lg shadow-md" alt="Dusun 2">
-    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 2</span>
-  </div>
-  <div class="flex flex-col items-center">
-    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
-    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
-  </div>
-    <div class="flex flex-col items-center">
-    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
-    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
-  </div>
-    <div class="flex flex-col items-center">
-    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
-    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
-  </div>
-    <div class="flex flex-col items-center">
-    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
-    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
-  </div>
+
+
+<div class="stat-item bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900 cursor-pointer" id="pendudukCard"data-aos="fade-up">
+  <div class="icon">👨‍👩‍👧‍👦 🏠</div>
+  <h3>2,453</h3>
+  <p class="text-slate-200 text-xl">Total Penduduk & Kepala Keluarga</p>
 </div>
-    
+
+
+
+<!-- Popup Carousel -->
+<div class="card-desc hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" id="popup">
+  <div class="bg-gray-800 rounded-lg shadow-lg max-w-lg w-full sm:max-w-xl relative mx-4 p-4 overflow-hidden">
+    <!-- Tombol Close -->
+    <!-- <button class="closePopup absolute top-2 right-2 text-gray-400 hover:text-red-600 text-3xl">&times;</button> -->
+
+    <div class="relative overflow-hidden">
+      <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out">
+        <!-- Slide 0 (Dusun) -->
+        <div class="min-w-full flex flex-col items-center">
+          <h2 class="text-2xl font-bold mb-4 text-white text-center pt-20 mt-20">Peta Perdusun</h2>
+          <div class="grid grid-cols-2 gap-4 w-full">
+            <div class="flex flex-col items-center h-10">
+              <img src="/img/bg/dusun1.png" class="rounded-lg shadow-mdmax-w-xs w-full" alt="Dusun 1">
+              <span class="mt-2 text-gray-300 text-sm font-semibold">Dusun 1</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="/img/bg/dusun2.png" class="rounded-lg shadow-mdmax-w-xs w-full" alt="Dusun 2">
+              <span class="mt-2 text-gray-300 text-sm font-semibold">Dusun 2</span>
+            </div>
+                        <div class="flex flex-col items-center">
+              <img src="/img/bg/dusun3.png" class="rounded-lg shadow-mdmax-w-xs w-full" alt="Dusun 2">
+              <span class="mt-2 text-gray-300 text-sm font-semibold">Dusun 2</span>
+            </div>
+                        <div class="flex flex-col items-center">
+              <img src="/img/bg/dusun4.png" class="rounded-lg shadow-mdmax-w-xs w-full" alt="Dusun 2">
+              <span class="mt-2 text-gray-300 text-sm font-semibold">Dusun 2</span>
+            </div>  
+          </div>
+        </div>
+        <!-- Slide 1 (Lahan) -->
+        <div class="min-w-full flex flex-col items-center">
+          <h2 class="text-2xl font-bold mb-4 text-white text-center pt-20">Hektar Lahan</h2>
+          <p class="mt-4 text-gray-300 text-center">Total lahan: 850 hektar.
+            <br>
+            Desa Cijengkol merupakan salah satu desa yang berada di wilayah Kecamatan Serangpanjang, Kabupaten Subang, Jawa Barat. Desa ini terletak di bagian selatan Kabupaten Subang dengan luas wilayah mencapai 854,45 hektare (Ha).  Secara administratif, Desa Cijengkol memiliki wilayah yang cukup luas, sehingga mencakup area pemukiman penduduk, lahan pertanian, serta kawasan lainnya yang menjadi penunjang aktivitas masyarakat.
+            <br>
+Dengan kondisi geografis yang berada di dataran relatif tinggi, desa ini memiliki potensi besar dalam sektor pertanian, perkebunan, serta pengembangan desa wisata berbasis alam. Selain itu, kehidupan sosial masyarakatnya juga masih kental dengan nilai gotong royong dan tradisi budaya lokal yang diwariskan secara turun-temurun.
+<br>
+          </p>
+           <img src="/img/bg/maps.png" class="rounded-lg shadow-md w-45 h-25" alt="Dusun 1">
+        </div>
+        <!-- Slide 2 (Penduduk & KK) -->
+        <div class="min-w-full flex flex-col items-center mt-20">
+          <h2 class="text-2xl font-bold mb-4 text-white text-center pt-20">Penduduk & KK</h2>
+          <p class="mt-4 text-gray-300 text-center">Total Penduduk: 2,453 <br> Kepala Keluarga: 687
+            <br>
+            Berdasarkan data sementara, jumlah penduduk di Desa Cijengkol tercatat sebanyak 5.432 jiwa dengan komposisi yang relatif seimbang antara laki-laki dan perempuan. Dari total tersebut, penduduk laki-laki berjumlah 2.696 jiwa atau sekitar 49,00%, sedangkan penduduk perempuan berjumlah 2.736 jiwa atau sekitar 51,00%. Data ini menunjukkan bahwa jumlah perempuan sedikit lebih banyak dibandingkan laki-laki, meskipun selisihnya tidak terlalu besar.
+            <br>
+            Selain jumlah penduduk, Desa Cijengkol juga memiliki 1.667 Kepala Keluarga (KK) yang tersebar di empat dusun dengan jumlah yang bervariasi sesuai kepadatan penduduk dan luas wilayah masing-masing.
+            Dengan jumlah KK yang cukup besar dan populasi yang seimbang, Desa Cijengkol memiliki modal sumber daya manusia yang penting untuk menggerakkan program pembangunan. 
+
+        </p>
+        </div>
+      </div>
+
+      <!-- Tombol Prev & Next -->
+     <button id="closePopup" class="absolute top-2 right-2 ... absolute top-2 right-2 text-gray-400 hover:text-red-600 text-3xl mt-20">&times;</button>
+<button id="prevBtn" class="absolute left-0 top-1/2 ..."><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#e01b24"></path> </g></svg></button>
+<button id="nextBtn" class="absolute right-0 top-1/2 ..."><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#e01b24"></path> </g></svg></button>
+
     </div>
   </div>
+</div>
+
+
 </div>
 
             </div>
@@ -897,45 +924,48 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
-  const card = document.getElementById('dusunCard');
-  const popup = document.getElementById('dusunPopup');
-  const popupContent = popup.querySelector('div.bg-gray-800'); // konten utama popup
+  const popup = document.getElementById('popup');
+  const closePopupBtn = document.getElementById('closePopup');
+  const track = document.getElementById('carouselTrack');
+  const slides = track.children;
+  let currentIndex = 0;
 
-  function openPopup() {
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    track.style.transform = `translateX(${offset}%)`;
+  }
+
+  function openPopup(index) {
+    currentIndex = index;
+    updateCarousel();
     popup.classList.remove('hidden');
-    history.pushState({ popupOpen: true }, '', '#dusun-popup');
   }
 
-  function closePopup() {
-    popup.classList.add('hidden');
-    if (location.hash === '#dusun-popup') {
-      history.back();
-    }
-  }
+  // Event card
+  document.getElementById('dusunCard').addEventListener('click', () => openPopup(0));
+  document.getElementById('lahanCard').addEventListener('click', () => openPopup(1));
+  document.getElementById('pendudukCard').addEventListener('click', () => openPopup(2));
 
-  card.addEventListener('click', openPopup);
-
-  // Tutup popup hanya jika user klik di dalam konten popup
-  popupContent.addEventListener('click', function () {
-    closePopup();
+  // Next / Prev
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  });
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
   });
 
-  // Jangan tutup popup jika klik di area gelap
-  popup.addEventListener('click', function (e) {
-    if (e.target === popup) {
-      // Tidak melakukan apa-apa
-      e.stopPropagation();
-    }
-  });
-
-  // Jika user tekan tombol back browser, popup tetap tertutup
-  window.addEventListener('popstate', function () {
-    if (!popup.classList.contains('hidden')) {
-      popup.classList.add('hidden');
-    }
+  // Close popup
+  closePopupBtn.addEventListener('click', () => popup.classList.add('hidden'));
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) popup.classList.add('hidden');
   });
 });
+
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
