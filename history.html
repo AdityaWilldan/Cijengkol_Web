@@ -428,65 +428,47 @@
 <body class="overflow-x-hidden" id="background">
     <!-- Header -->
     <header>
-        <div class="header-container">
-
-            <nav id="header-nav" class="shadow-xl bg-gray-900 rounded-b-2xl p-2 fixed w-full z-50 top-0 left-0">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-    <!-- <a href="#" class="flex items-center">
-      <img src="/img/KKN 05 CIJENGKOL.png" class="h-10 mr-3" alt="Logo Desa" />
-      <span class="self-center text-2xl font-sans whitespace-nowrap text-blue-500">Desa<span class="text-sky-400">Cijengkol</span></span>
-    </a> -->
-                <div class="logo">
+          <nav id="header-nav" class="shadow-xl bg-gray-900 rounded-b-2xl p-2 fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-screen-lg mx-auto flex flex-wrap items-center justify-between px-4">
+      <a href="https://www.instagram.com/hima_teknikinformatika/" class="flex items-center">
+          <div class="logo">
                 <img src="/img/KKN 05 CIJENGKOL.png"alt="Logo Desa" class="h-10 mr-3">
                 <div>
                     <h1>Desa Cijengkol</h1>
-                    <small>Kecamatan Serang Panjang, Kabupaten Subang</small>
+                    <!-- <small>Kecamatan Serang Panjang, Kabupaten Subang</small> -->
                 </div>
             </div>
-    <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
-      <span class="sr-only">Open main menu</span>
-      <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-      </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-800 md:flex-row md:space-x-3 md:mt-0 md:border-0 md:bg-transparent">
-        <li>
-          <a href="#home" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0">Beranda</a>
-        </li>
-        <li>
-          <a href="/umkm.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">UMKM</a>
-        </li>
-        <li>
-          <a href="/wisata.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Wisata&Kuliner</a>
-        </li>
-        <!-- <li>
-          <a href="/gallery.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Gallery</a>
-        </li> -->
-        <!-- Tambahkan menu lain sesuai kebutuhan -->
-      </ul>
+      </a>
+      <button data-collapse-toggle="navbar-solid-bg" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden 
+               hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 
+               dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-solid-bg" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-800 
+                   md:flex-row md:space-x-3 md:mt-0 md:border-0 md:bg-transparent">
+          <li><a href="/index.html" class="block py-2 pl-3 pr-4 text-white rounded md:p-0 md:text-blue-700">Beranda</a></li>
+          <li><a href="/umkm.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700">UMKM</a></li>
+          <li><a href="/wisata.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700">Wisata&Kuliner</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-        </div>
+  </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-    <h1 data-aos="fade-up" class="text-3xl sm:text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-    Selamat Datang di
-    <span class="text-blue-400">Desa</span><span class="text-sky-500"> Cijengkol</span>
-    </h1>
-            <!-- <h2>Selamat Datang di Desa Cijengkol</h2> -->
-              </div>
-        </div>
-    </section>
+
 
 
 
 <!-- Sejarah Section -->
-<section id="sejarah" class="bg-gray-50 dark:bg-gray-900 py-16">
+<section id="sejarah" class="bg-gray-50 dark:bg-gray-900 py-16 m-20">
   <div class="max-w-4xl mx-auto px-6">
     <!-- Judul -->
     <div class="text-center mb-10" data-aos="fade-up">
@@ -532,51 +514,7 @@
 </section>
 
 <!-- Sejarah Section -->
-<section id="sejarah" class="bg-gray-50 dark:bg-gray-900 py-16">
-  <div class="max-w-4xl mx-auto px-6">
-    <!-- Judul -->
-    <div class="text-center mb-10" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white">
-        Sejarah Desa Cijengkol
-      </h2>
-      <p class="mt-3 text-lg text-gray-600 dark:text-gray-300">
-        Mengenal asal-usul dan perjalanan Desa Cijengkol dari masa ke masa
-      </p>
-    </div>
 
-    <!-- Artikel -->
-    <article class="prose lg:prose-lg dark:prose-invert prose-slate mx-auto leading-relaxed text-justify" data-aos="fade-up" data-aos-delay="100">
-      <p>
-        Desa Cijengkol merupakan salah satu desa yang terletak di Kecamatan Serang Panjang, Kabupaten Subang.
-        Sejak dahulu, desa ini dikenal dengan keasrian alamnya serta masyarakat yang menjunjung tinggi semangat gotong royong.
-      </p>
-
-      <!-- Gambar nyelip ala koran -->
-      <p>
-        <img src="/img/sejarah-desa.jpg" alt="Ilustrasi Sejarah Desa"
-             class="float-left w-60 h-auto mr-4 mb-2 rounded-lg shadow-md" />
-        Berdasarkan cerita para sesepuh, nama <strong>Cijengkol</strong> berasal dari pohon jengkol yang tumbuh subur di sekitar
-        aliran sungai pada masa lampau. Dari situlah kemudian kawasan ini dikenal sebagai tempat tinggal yang nyaman
-        dan berkembang menjadi sebuah perkampungan. Keberadaan pohon ini menjadi simbol sekaligus penanda bagi masyarakat setempat.
-      </p>
-
-      <p>
-        Seiring berjalannya waktu, Desa Cijengkol tumbuh menjadi desa yang dinamis. Masyarakatnya banyak yang
-        berprofesi sebagai petani, peternak, serta pelaku UMKM. Tradisi adat dan kebudayaan masih terjaga,
-        menjadikan desa ini kaya akan nilai sejarah dan budaya.
-      </p>
-
-      <!-- Gambar nyelip kanan -->
-      <p>
-        <img src="/img/tradisi.jpg" alt="Tradisi Desa"
-             class="float-right w-60 h-auto ml-4 mb-2 rounded-lg shadow-md" />
-        Hingga saat ini, Desa Cijengkol terus bertransformasi menjadi desa yang maju, sejahtera, dan berkelanjutan,
-        dengan tetap menjaga warisan budaya dan kearifan lokal yang diwariskan oleh leluhur. 
-        Kehidupan sosial masyarakat masih erat dengan gotong royong, sehingga nilai kebersamaan tetap terjaga meski zaman semakin modern.
-      </p>
-    </article>
-  </div>
-</section>
 
 
 

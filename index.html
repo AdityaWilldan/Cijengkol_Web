@@ -8,11 +8,14 @@
        <link rel="stylesheet" href="style.css">
        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        html, body {
+  width: 100%;
+  overflow-x: hidden; /* paksa hilangin scroll horizontal */
+}
+
+* {
+  max-width: 100vw; /* cegah elemen melebihi lebar layar */
+}
 
         body {
             font-family: 'Arial', sans-serif;
@@ -22,7 +25,7 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #0f172b, #172750);
+            /* background: linear-gradient(135deg, #0f172b, #172750); */
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -33,9 +36,7 @@
             /* border-radius: 0 0 25px 25px; */
         }
 
-        #header-nav{
-             background: linear-gradient(135deg, #0f172b, #172750);
-        }
+
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -81,10 +82,12 @@
             color: #102661;
         }
         
-
+        #header-nav{
+             background: linear-gradient(135deg, #0f172b, #172750);
+        }
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/img/Screenshot\ from\ 2025-08-26\ 07-47-51.png');
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/img/bg/beranda.PNG ');
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -100,6 +103,7 @@
             margin-left: auto;   /* Tambahkan ini */
             margin-right: auto;
             margin-top: 5%;
+            
         }
 
 
@@ -114,6 +118,11 @@
             margin-bottom: 2rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
+
+        .hero-content {
+            margin-top: 15%; /* atur sesuai kebutuhan */
+}
+
 
         .btn {
             display: inline-block;
@@ -407,10 +416,36 @@
         width: 100%;
     }
     .news-item iframe {
-        width: 250%;
+        width: 100%;
         height: 350px; /* Atur tinggi sesuai kebutuhan mobile */
     }
 }
+#nav-footer{
+    margin-right: 80px;
+}
+
+@media(max-width: 768px){
+#nav-footer{
+    margin-right: 0px;
+}
+}
+
+@media(max-width: 768px){
+#nav-footer2{
+    margin-right: 50px;
+}
+}
+
+@media(max-width: 768px){
+#img-footer{
+    margin-right: 50px;
+}
+}
+
+#nav-footer2{
+    margin-left: 80px;
+}
+
 @media (max-width: 768px) {
     .hero {
         height: 30vh; /* Atur sesuai kebutuhan, misal 25vh atau 35vh */
@@ -423,36 +458,40 @@
         margin-bottom: 20px;
     }
 }
+
+@media (max-width: 768px) {
+  #dusunPopup .max-w-3xl {
+    max-width: 98vw;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px){
+            .hero-content {
+            margin-top: 25%; /* atur sesuai kebutuhan */
+}
+}
     </style>
 </head>
 <body class="overflow-x-hidden" id="background">
     <!-- Header -->
-    <header>
-        <div class="header-container">
-
-            <nav id="header-nav" class="shadow-xl bg-gray-900 rounded-b-2xl p-2 fixed w-full z-50 top-0 left-0">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-    <!-- <a href="#" class="flex items-center">
-      <img src="/img/KKN 05 CIJENGKOL.png" class="h-10 mr-3" alt="Logo Desa" />
-      <span class="self-center text-2xl font-sans whitespace-nowrap text-blue-500">Desa<span class="text-sky-400">Cijengkol</span></span>
-    </a> -->
-                <div class="logo">
-                <img src="/img/KKN 05 CIJENGKOL.png"alt="Logo Desa" class="h-10 mr-3">
-                <div>
-                    <h1>Desa Cijengkol</h1>
-                    <small>Kecamatan Serang Panjang, Kabupaten Subang</small>
-                </div>
-            </div>
-    <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
-      <span class="sr-only">Open main menu</span>
-      <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-      </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-800 md:flex-row md:space-x-3 md:mt-0 md:border-0 md:bg-transparent">
+    <!-- <header>
+        <nav id="header-nav" class="shadow-xl bg-gray-900 rounded-b-2xl p-2 z-50 top-0 left-0">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
+            <a href="https://www.instagram.com/hima_teknikinformatika/" class="flex items-center">
+                <img src="/img/KKN 05 CIJENGKOL(1).png" class="h-20 mr-3 " alt="Will Dev" />
+                <p class="self-center text-2xl font-sans whitespace-nowrap text-blue-500">Desa Cijengkol</p>
+            </a>
+            <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-800 md:flex-row md:space-x-3 md:mt-0 md:border-0 md:bg-transparent">
         <li>
-          <a href="#home" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0">Beranda</a>
+          <a href="/index.html" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0">Beranda</a>
         </li>
         <li>
           <a href="/umkm.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">UMKM</a>
@@ -460,27 +499,55 @@
         <li>
           <a href="/wisata.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Wisata&Kuliner</a>
         </li>
-        <!-- <li>
-          <a href="/gallery.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Gallery</a>
-        </li> -->
-        <!-- Tambahkan menu lain sesuai kebutuhan -->
-      </ul>
-    </div>
-  </div>
-</nav>
-        </div>
-    </header>
+        </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="header-container">
 
+
+        </div>
+    </header> -->
+<header>
+  <nav id="header-nav" class="shadow-xl bg-gray-900 rounded-b-2xl p-2 fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-screen-lg mx-auto flex flex-wrap items-center justify-between px-4">
+      <a href="#" class="flex items-center">
+          <div class="logo">
+                <img src="/img/KKN 05 CIJENGKOL.png"alt="Logo Desa" class="h-10 mr-3">
+                <div>
+                    <h1>Desa Cijengkol</h1>
+                    <!-- <small>Kecamatan Serang Panjang, Kabupaten Subang</small> -->
+                </div>
+            </div>
+      </a>
+      <button data-collapse-toggle="navbar-solid-bg" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden 
+               hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 
+               dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-solid-bg" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-800 
+                   md:flex-row md:space-x-3 md:mt-0 md:border-0 md:bg-transparent">
+          <li><a href="/index.html" class="block py-2 pl-3 pr-4 text-white rounded md:p-0 md:text-blue-700">Beranda</a></li>
+          <li><a href="/umkm.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700">UMKM</a></li>
+          <li><a href="/wisata.html" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700">Wisata&Kuliner</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+    
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero pt-32" id="home">
         <div class="hero-content">
-    <h1 data-aos="fade-up" class="text-3xl sm:text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-    Selamat Datang di
-    <span class="text-blue-400">Desa</span><span class="text-sky-500"> Cijengkol</span>
-    </h1>
-            <!-- <h2>Selamat Datang di Desa Cijengkol</h2> -->
-             <br>
-            <p class="text-xs sm:text-2xl md:text-7xl" data-aos="fade-up">Desa yang Maju, Sejahtera, dan Berkelanjutan untuk Semua Warga</p>
             <!-- <a href="#layanan" class="btn">Jelajahi Layanan</a>
                         <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start"> -->
                 <button class="button-hero">
@@ -509,19 +576,66 @@
                     <h3>687</h3>
                     <p class="text-slate-200 text-xl">Kepala Keluarga</p>
                 </div>
-                <div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900" data-aos="fade-left">
-                    <div class="icon">📍</div>
-                    <h3>4</h3>
-                    <p class="text-slate-200 text-xl">Dusun</p>
-                </div>
                 <div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900" data-aos="fade-up">
                     <div class="icon">🌾</div>
                     <h3>850</h3>
                     <p class="text-slate-200 text-xl">Hektar Lahan</p>
                 </div>
+                <!-- <div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900" data-aos="fade-left">
+                    <div class="icon">📍</div>
+                    <h3>4</h3>
+                    <p class="text-slate-200 text-xl">Dusun</p>
+                </div> -->
+
+                <!-- Card pemicu popup -->
+<div class="stat-item fade-in bg-gray-700 hover:bg-gradient-to-r from-blue-950 to-blue-900 cursor-pointer" id="dusunCard" data-aos="fade-left">
+  <div class="icon">📍</div>
+  <h3>4</h3>
+  <p class="text-slate-200 text-xl">Dusun</p>
+</div>
+
+<!-- Popup Deskripsi -->
+<div class="card-desc hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 overflow-y-auto max-h-screen" id="dusunPopup">
+  <div class="bg-gray-800 rounded-lg shadow-lg max-w-3xl w-full p-6 relative backdrop-opacity-10 mx-4 my-8 max-h-[90vh] overflow-y-auto">
+    <button id="closePopup" class="absolute top-2 right-2 text-gray-700 hover:text-red-600 text-2xl pt-10 pr-10 h-50 w-50">&times;</button>
+    <h2 class="text-2xl font-bold mb-4 text-white pt-20 text-center">Peta Perdusun Di desa Cijengkol</h2>
+    <p class="mb-6 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, cumque est repellat, similique eaque iusto non repellendus maiores id temporibus illum nihil excepturi quisquam? Amet quam laboriosam adipisci aliquid porro.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div class="flex flex-col items-center">
+    <img src="https://picsum.photos/300/200?random=1" class="rounded-lg shadow-md" alt="Dusun 1">
+    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 1</span>
+  </div>
+  <div class="flex flex-col items-center">
+    <img src="https://picsum.photos/300/200?random=2" class="rounded-lg shadow-md" alt="Dusun 2">
+    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 2</span>
+  </div>
+  <div class="flex flex-col items-center">
+    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
+    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
+  </div>
+    <div class="flex flex-col items-center">
+    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
+    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
+  </div>
+    <div class="flex flex-col items-center">
+    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
+    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
+  </div>
+    <div class="flex flex-col items-center">
+    <img src="https://picsum.photos/300/200?random=3" class="rounded-lg shadow-md" alt="Dusun 3">
+    <span class="mt-2 text-gray-700 text-sm font-semibold">Dusun 3</span>
+  </div>
+</div>
+    
+    </div>
+  </div>
+</div>
+
             </div>
         </div>
     </section>
+
+
 
     <!-- Services Section -->
     <section class="services" id="layanan">
@@ -609,7 +723,7 @@
     </section> -->
 
     <!-- Contact Section -->
-    <section class="contact" id="kontak">
+    <!-- <section class="contact" id="kontak">
         <div class="container">
             <div class="section-title">
                 <h2 style="color: white;">Hubungi Kami</h2>
@@ -665,7 +779,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- <div class="">
@@ -673,12 +787,40 @@
 </div> -->
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Desa Maju Bersama. Semua hak dilindungi undang-undang.</p>
-            <p>Website ini dikelola oleh Pemerintah Desa Maju Bersama</p>
+
+
+ <footer class="bg-gray-800 rounded-lg shadow-sm text-white">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="flex items-center mb-4 sm:mb-0 space-x-3">
+          <img src="/img/image-224x225.png" class="h-15 w-20" alt="Logo 1" />
+          <img src="/img/um.png" class="h-12 w-12" alt="Logo 2" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap">Cijengkol</span>
         </div>
-    </footer>
+
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0">
+          <li><a href="#" class="hover:underline me-4 md:me-6">Beranda</a></li>
+          <li><a href="/umkm.html" class="hover:underline me-4 md:me-6">UMKM</a></li>
+          <li><a href="/wisata.html" class="hover:underline me-4 md:me-6">Wisata & Kuliner</a></li>
+          <li><a href="/gallery.html" class="hover:underline">Gallery</a></li>
+        </ul>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <span class="block text-sm text-gray-400 sm:text-center">
+        © 2025 <a href="https://flowbite.com/" class="hover:underline">Cijengkol™</a> 8JPH+2J4,
+          Kec. Serang Panjang, Kabupaten Subang, Jawa Barat (41282) 
+          Desa Cijengkol, Kab. Subang (41282)
+            
+          <br>
+         <strong>Telepon:</strong> (021) 1234-5678
+        <strong>Email:</strong> info@desamajubersama.com</p>
+      </span>
+    </div>
+  </footer>
+
+
+
+
 
 </body>
 
@@ -753,6 +895,46 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileMenu.classList.toggle('block');
     });
   }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const card = document.getElementById('dusunCard');
+  const popup = document.getElementById('dusunPopup');
+  const popupContent = popup.querySelector('div.bg-gray-800'); // konten utama popup
+
+  function openPopup() {
+    popup.classList.remove('hidden');
+    history.pushState({ popupOpen: true }, '', '#dusun-popup');
+  }
+
+  function closePopup() {
+    popup.classList.add('hidden');
+    if (location.hash === '#dusun-popup') {
+      history.back();
+    }
+  }
+
+  card.addEventListener('click', openPopup);
+
+  // Tutup popup hanya jika user klik di dalam konten popup
+  popupContent.addEventListener('click', function () {
+    closePopup();
+  });
+
+  // Jangan tutup popup jika klik di area gelap
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup) {
+      // Tidak melakukan apa-apa
+      e.stopPropagation();
+    }
+  });
+
+  // Jika user tekan tombol back browser, popup tetap tertutup
+  window.addEventListener('popstate', function () {
+    if (!popup.classList.contains('hidden')) {
+      popup.classList.add('hidden');
+    }
+  });
 });
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
